@@ -1,5 +1,10 @@
-from dotenv import dotenv_values
+import asyncio
+from bot import start
 
-config = dotenv_values('../.env')
 
-print(config)
+def main() -> None:
+    asyncio.run(start())
+
+
+if __name__ == '__main__':
+    main()
