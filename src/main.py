@@ -1,9 +1,14 @@
+import logging
 import asyncio
-from bot import start
+from bot import start as start_bot
 
 
 def main() -> None:
-    asyncio.run(start())
+    while True:
+        try:
+            asyncio.run(start_bot())
+        except Exception as e:
+            logging.error(e)
 
 
 if __name__ == '__main__':
